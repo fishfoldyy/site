@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordle</title>
+    <link rel="stylesheet" href="wordle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+  </head>
+
+  <h1 style="display: flex;">
+    <b>wordle</b>
+    <button id="home">home</button>
+  </h1>
+  
+  <main>
+    <body><p>this is a wordle replica.</p></body>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <p id="popuptxt">pop up</p>
+        <button id="playagain">play again</button>
+      </div>
+    </div>
+
+    <div id="container">
+      <div class="guesscontainer">
+        <div class="guess" id="11"></div>
+        <div class="guess" id="12"></div>
+        <div class="guess" id="13"></div>
+        <div class="guess" id="14"></div>
+        <div class="guess" id="15"></div>
+      </div>
+      <div class="guesscontainer">
+        <div class="guess" id="21"></div>
+        <div class="guess" id="22"></div>
+        <div class="guess" id="23"></div>
+        <div class="guess" id="24"></div>
+        <div class="guess" id="25"></div>
+      </div>
+      <div class="guesscontainer">
+        <div class="guess" id="31"></div>
+        <div class="guess" id="32"></div>
+        <div class="guess" id="33"></div>
+        <div class="guess" id="34"></div>
+        <div class="guess" id="35"></div>
+      </div>
+      <div class="guesscontainer">
+        <div class="guess" id="41"></div>
+        <div class="guess" id="42"></div>
+        <div class="guess" id="43"></div>
+        <div class="guess" id="44"></div>
+        <div class="guess" id="45"></div>
+      </div>
+      <div class="guesscontainer">
+        <div class="guess" id="51"></div>
+        <div class="guess" id="52"></div>
+        <div class="guess" id="53"></div>
+        <div class="guess" id="54"></div>
+        <div class="guess" id="55"></div>
+      </div>
+      <div class="guesscontainer">
+        <div class="guess" id="61"></div>
+        <div class="guess" id="62"></div>
+        <div class="guess" id="63"></div>
+        <div class="guess" id="64"></div>
+        <div class="guess" id="65"></div>
+      </div>
+    </div>
+    
+    <div id="keyboard">
+      <div id="row1">
+        <button class="k" id="Q">q</button>
+        <button class="k" id="W">w</button>
+        <button class="k" id="E">e</button>
+        <button class="k" id="R">r</button>
+        <button class="k" id="T">t</button>
+        <button class="k" id="Y">y</button>
+        <button class="k" id="U">u</button>
+        <button class="k" id="I">i</button>
+        <button class="k" id="O">o</button>
+        <button class="k" id="P">p</button>
+      </div>
+      <div></div>
+      <div id="row2" style="margin-top: 5px;">
+        <button class="k" id="A">a</button>
+        <button class="k" id="S">s</button>
+        <button class="k" id="D">d</button>
+        <button class="k" id="F">f</button>
+        <button class="k" id="G">g</button>
+        <button class="k" id="H">h</button>
+        <button class="k" id="J">j</button>
+        <button class="k" id="K">k</button>
+        <button class="k" id="L">l</button>
+      </div>
+      <div></div>
+      <div id="row3" style="margin-top: 5px;">
+        <button class="back" id="back">del</button>
+        <button class="k" id="Z">z</button>
+        <button class="k" id="X">x</button>
+        <button class="k" id="C">c</button>
+        <button class="k" id="V">v</button>
+        <button class="k" id="B">b</button>
+        <button class="k" id="N">n</button>
+        <button class="k" id="M">m</button>
+        <button class="enter" id="enter">enter</button>
+      </div>
+    </div>
+  </main>
+
+  <footer style="margin-top: 100px; padding-bottom: 10px; font-size: 14px;">
+    made by fishfoldyy
+  </footer>
+
+  <script src="wordle.js"></script>
+  
+</html>
