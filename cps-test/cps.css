@@ -1,0 +1,104 @@
+html {
+  height: fit-content;
+  width: 90%;
+  padding-top: 10px;
+  font-family: "Abel", Helvetica, sans-serif;
+  overflow: scroll;
+}
+
+header { 
+  top: 0;
+  font-size: 28px;
+}
+
+#home {
+    display: block;
+    position: fixed;
+    top: 28px;
+    right: 20px;
+    padding: 10px 26px;
+    width: fit-content;
+    height: 40px;
+    background-color: #324ac3;
+    color: white;
+    font-family: "Abel", Helvetica, sans-serif;
+    text-align: left;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+#home:hover {
+    background-color: #c8c8c8;
+}
+
+body {
+  background-color: white;
+  font-size: 15px;
+  color: black;
+  padding-left: 10px;
+}
+
+.button-row button {
+  width: 22%;
+  font-size: 13px;
+  height: 70px;
+  padding: 0px;
+  border: 3px solid lightgrey; 
+  background-color: white;
+  color: black;
+}
+
+.button-row button:disabled {
+  background-color: #ccc; 
+  color: #666; 
+  border: 2px solid #666;
+  cursor: not-allowed; 
+}
+
+body button {
+  background-color: #324ac3;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  margin: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-family: "Abel", Helvetica, sans-serif;
+  cursor: pointer;  
+  border-radius: 8px;
+}
+
+#clicky {
+  background-color: #c7d0ff;
+  border: none;
+  color: black;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  min-height: 250px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-family: "Abel", Helvetica, sans-serif;
+  cursor: pointer;  
+  border-radius: 10px;
+}
+
+#clicky:disabled {
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed; 
+}
+
+footer { 
+  position: fixed;
+  bottom: 0px;
+  width: 115%;
+  background-color: white;
+  height: fit-content; 
+  display: flex;
+  align-items: center; 
+}
