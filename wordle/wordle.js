@@ -9,7 +9,7 @@ let validGuesses = [];
 
 // Event listeners
 document.getElementById("home").addEventListener('click', function() {
-  window.location.href = "/#stuff";
+  window.location.href = "/site/#stuff";
 });
 
 window.onclick = function(event) {
