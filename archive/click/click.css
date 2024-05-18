@@ -1,0 +1,61 @@
+html {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  overflow-y: scroll;
+  font-family: monospace;
+  font-size: 3.2vw;
+  background-color: white;
+  color: black;
+  display: flex;
+
+}
+
+header {
+  background-color: #3c3c3c;
+  color: white;
+  left: 0;
+  top: 0;  
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  font-size: 4vw;
+  text-align: center;
+}
+
+button {
+  background-color: #3c3c3c;
+  color: white;
+  font-family: monospace;
+  font-size: 4vw;
+  padding: 2vw;
+  margin: 1vw;
+  border: none;
+}
+
+body {
+  padding-top: 15vw;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#conditionalButton {
+  display: none;
+  justify-content: center;
+}
+
+footer {
+  background-color: #3c3c3c;
+  color: white;
+  font-size: 1.8vw;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding: 0.8vw;
+}
