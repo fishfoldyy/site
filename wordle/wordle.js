@@ -10,11 +10,21 @@ window.onclick = function(event) {
   }
 }
 
+document.getElementById("back").addEventListener('click', function() {
+  backspace();
+});
+
+document.getElementById("enter").addEventListener('click', function() {
+  enter();
+});
+
 var keys = document.querySelectorAll('.k');
 
 keys.forEach(function(key) {
   key.addEventListener('click', function() {
-    type(key.id);
+    if (gameStatus != '') {
+      type(key.id);
+    };
   });
 });
 
@@ -38,6 +48,14 @@ document.addEventListener("keyup", (e) => {
   };
   
 });
+
+function stopInteraction() {
+  gameStatus = 'pause';
+}
+
+function startInteraction() {
+  gameStatus = '';
+}
 
 // answer selection below
 
@@ -85,21 +103,13 @@ document.getElementById("playagain").addEventListener('click', function() {
 
 // main code below
 
-let winstatus = "";
+let gameStatus = "";
 let guess = 1;
 let currentBox = 1;
 let word = "";
 
-document.getElementById("back").addEventListener('click', function() {
-  backspace();
-});
-
-document.getElementById("enter").addEventListener('click', function() {
-  enter();
-});
-
 function backspace() {
-  if (currentBox != 1 && winstatus == '') {
+  if (currentBox != 1 && gameStatus == '') {
     currentBox--;
     document.getElementById(guess.toString() + currentBox.toString()).innerText = "";
     word = word.slice(0, -1);
@@ -111,13 +121,14 @@ function enter() {
   for (let i = 1; i <= 5; i++) {
     word += document.getElementById(guess.toString() + i.toString()).innerText.toLowerCase();
   };
+  stopInteraction();
   valid(word).then(isValid => {
     if (isValid) {
-      winstatus = check(word, answer);      
-      if (winstatus == 'win') {        
+      gameStatus = check(word, answer);      
+      if (gameStatus == 'win') {        
         document.getElementById("popuptxt").innerText = `you won with ${guess} guesses!`;
         document.getElementById("popup").style.display = "block";
-      } else if (winstatus == 'lose') {
+      } else if (gameStatus == 'lose') {
         document.getElementById("popuptxt").innerText = `you lost. the word was "${answer}".`;
         document.getElementById("popup").style.display = "block";
       } else {
@@ -126,13 +137,14 @@ function enter() {
         currentBox = 1;
       }
     } else {
+      startInteraction();
       console.log("invalid word");
     };
   });
 };
 
 function type(key) {
-  if (winstatus === "") {
+  if (gameStatus === "") {
     if (currentBox == 6) {
       return;
     } else {
@@ -161,7 +173,7 @@ async function valid(u) {
   };
 };
 
-function check(g, answer) {
+async function check(g, answer) {
   let result = Array(g.length).fill(''); // Initialize result array
   let guessMatched = Array(g.length).fill(false); // Track matched positions in guess
   let answerMatched = Array(answer.length).fill(false); // Track matched positions in answer
@@ -191,7 +203,7 @@ function check(g, answer) {
         if (!answerMatched[j] && g[i] === answer[j]) {
           result[i] = 'Y'; // mark y
           document.getElementById(guess.toString() + (i + 1).toString()).style.backgroundColor = "lightyellow";
-          if (document.getElementById(g[i].toUpperCase()).style.backgroundColor !== "lightgreen") {
+          if (document.getElementById(g[i].toUpperCase()).style.backgroundColor == "white") {
             document.getElementById(g[i].toUpperCase()).style.backgroundColor = "lightyellow";
           }
           guessMatched[i] = true;
@@ -204,9 +216,11 @@ function check(g, answer) {
 
   // grey
   for (let i = 0; i < g.length; i++) {
-    if (result[i] === '') {
+    if (result[i] == '') {
       document.getElementById(guess.toString() + (i + 1).toString()).style.backgroundColor = "lightgrey";
-      document.getElementById(g[i].toUpperCase()).style.backgroundColor = "lightgrey";
+      if (document.getElementById(g[i].toUpperCase()).style.backgroundColor == "white") {
+        document.getElementById(g[i].toUpperCase()).style.backgroundColor = "lightyellow";
+      }
     }
   }
 
