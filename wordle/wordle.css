@@ -91,9 +91,9 @@ header {
     font-family: "Abel", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    width: 6vw;
-    height: 12vw;
-    max-width: 30px;
+    width: 7vw;
+    height: 13vw;
+    max-width: 35px;
     max-height: 40px;
     border: 1px solid lightgrey;
     border-radius: 5px;
@@ -110,8 +110,8 @@ header {
     font-family: "Abel", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    width: 12vw;
-    height: 12vw;
+    width: 13vw;
+    height: 13vw;
     max-width: 60px;
     max-height: 40px;
     border: 1px solid lightgrey;
@@ -129,8 +129,8 @@ header {
     font-family: "Abel", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
-    width: 12vw;
-    height: 12vw;
+    width: 13vw;
+    height: 13vw;
     max-width: 60px;
     max-height: 40px;
     border: 1px solid lightgrey;
