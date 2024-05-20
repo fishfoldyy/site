@@ -178,13 +178,6 @@ function check(g, answer) {
   let guessMatched = Array(g.length).fill(false); // Track matched positions in guess
   let answerMatched = Array(answer.length).fill(false); // Track matched positions in answer
 
-  if (g === answer) { // win!
-    for (let i = 0; i < 5; i++) {
-      document.getElementById(guess.toString() + (i + 1).toString()).style.backgroundColor = "lightgreen";
-    }
-    return 'win';
-  }
-
   // green
   for (let i = 0; i < g.length; i++) {
     if (g[i] === answer[i]) {
@@ -218,6 +211,10 @@ function check(g, answer) {
       document.getElementById(guess.toString() + (i + 1).toString()).style.backgroundColor = "lightgrey";
       updateKeyColor(g[i], 'lightgrey');
     }
+  }
+
+  if (g === answer) { // win!
+    return 'win';
   }
 
   if (guess == 6) {
