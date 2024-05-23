@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordle</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+  </head>
+  <h1 style="display: flex;">
+    <b>ip address</b>
+    <button id="home">home</button>
+  </h1>
+  <main>
+    <p id="ip">getting ip address...</p>
+  </main>
+  <footer style="margin-top: 100px; padding-bottom: 10px; font-size: 14px;">
+    made by fishfoldyy
+  </footer>
+  <style>
+    html {
+        height: fit-content;
+        width: 100%;
+        padding-top: 10px;
+        font-family: "Abel", Helvetica, sans-serif;
+        overflow: scroll;
+    }
+
+    header { 
+        top: 0;
+        font-size: 28px;
+    }
+
+    #home {
+        display: block;
+        position: fixed;
+        top: 28px;
+        right: 20px;
+        padding: 10px 26px;
+        width: fit-content;
+        height: 40px;
+        background-color: #324ac3;
+        color: white;
+        font-family: "Abel", Helvetica, sans-serif;
+        text-align: left;
+        line-height: 20px;
+        font-size: 14px;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #home:hover {
+        background-color: #c8c8c8;
+    }
+
+    main {
+      background-color: white;
+      font-size: 15px;
+      color: black;
+      padding-left: 10px;
+    }
+
+    footer { 
+      position: fixed;
+      bottom: 0px;
+      width: 115%;
+      background-color: white;
+      height: fit-content; 
+      display: flex;
+      align-items: center; 
+    }
+  </style>
+  <script>
+    document.getElementById("home").addEventListener('click', function() {
+      window.location.href = "/site/#stuff";
+    })
+
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('ip').innerText = 'your IP address: ' + data.ip;
+      })
+    })
+  </script>
+  
+</html>
