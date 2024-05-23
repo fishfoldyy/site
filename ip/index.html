@@ -83,10 +83,19 @@
 
     document.addEventListener('DOMContentLoaded', function() {
       fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('network response was not ok');
+          }
+          return response.json();
+        })
         .then(data => {
           document.getElementById('ip').innerText = 'your IP address: ' + data.ip;
-      })
+        })
+        .catch(error => {
+          console.error('error:', error);
+          document.getElementById('ip').innerText = 'error getting IP address: ' + error.message;
+          })
     })
   </script>
   
