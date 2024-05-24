@@ -60,6 +60,9 @@ function endGame(draw) {
     winningMessageTextElement.innerText = `${circleTurn ? "o" : "x"} wins!`;
   }
   winningMessageElement.classList.add('show');
+  cellElements.forEach(cell => {
+    cell.removeEventListener('click', handleClick);
+  });
 }
 
 function isDraw() {
