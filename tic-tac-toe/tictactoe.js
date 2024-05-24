@@ -1,5 +1,5 @@
 document.getElementById("home").addEventListener('click', function() {
-  window.location.href = "/#stuff";
+  window.location.href = "/site/#stuff";
 })
 
 const X_CLASS = 'x';
