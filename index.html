@@ -30,12 +30,16 @@
     </div>
     <div id="stuff" style="padding: 10px;">
       <h4>here are some things ive made with html/js/css!</h4>
-      
+
+      <p>games:</p>
       <button onclick="window.location.href='cps-test/'">cps test</button>
       <button onclick="window.location.href='wordle/'">wordle</button>
-      <button onclick="window.location.href='ip/'">ip</button>
-      <div style="height: 20px;"></div>
-      <a href="archive/">more in archive ></a>
+      <button onclick="window.location.href='tic-tac-toe/'">tic tac toe</button>
+
+      <p>tools and others:</p>
+      <button onclick="window.location.href='ip/'">IP</button>
+
+      <p>more old stuff in <a href="archive/">archive</a></p>
       
     </div>
 
@@ -47,10 +51,25 @@
     made by fishfoldyy
   </footer>
 
-  <script src="index.js"></script>
-  
-</html>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var returnToTopButton = document.getElementById('return-to-top');
 
-  <script src="index.js"></script>
-  
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                returnToTopButton.style.display = 'block';
+            } else {
+                returnToTopButton.style.display = 'none';
+            }
+        });
+
+        returnToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
 </html>
