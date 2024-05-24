@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ip</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+  </head>
+
+  <h1 style="display: flex;">
+    <b>tic tac toe</b>
+    <button id="home">home</button>
+  </h1>
+
+  <main>
+    <!--game here-->
+    <div id="game-board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <h2 id="winning-message" class="winning-message">
+      <span id="winning-message-text"></span>
+      <div style="height: 15px;"></div>
+      <button id="restart-button">restart</button>
+    </h2>
+  </main>
+  
+  <footer style="margin-top: 100px; padding-bottom: 10px; font-size: 14px;">
+    made by fishfoldyy
+  </footer>
+
+  <script src="tictactoe.js"></script>
+  
+  <style>
+    html {
+        height: fit-content;
+        width: 90%;
+        padding: 10px 0px 0px 10px;
+        font-family: "Abel", Helvetica, sans-serif;
+        overflow: scroll;
+    }
+
+    header { 
+        top: 0;
+        font-size: 28px;
+    }
+
+    #home {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        padding: 10px 26px;
+        width: fit-content;
+        height: 40px;
+        background-color: #324ac3;
+        color: white;
+        font-family: "Abel", Helvetica, sans-serif;
+        text-align: left;
+        line-height: 20px;
+        font-size: 14px;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    #home:hover {
+        background-color: #c8c8c8;
+    }
+
+    main {
+      background-color: white;
+      font-size: 15px;
+      color: black;
+    }
+
+    #game-board {
+        display: grid;
+        grid-template-columns: repeat(3, 90px);
+        grid-template-rows: repeat(3, 90px);
+        gap: 5px;
+    }
+
+    .cell {
+        width: 90px;
+        height: 90px;
+        background-color: white;
+        border: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .winning-message {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .winning-message.show {
+        display: flex;
+    }
+
+    button {
+      padding: 10px 26px;
+      width: fit-content;
+      height: 40px;
+      background-color: #324ac3;
+      color: white;
+      font-family: "Abel", Helvetica, sans-serif;
+      text-align: left;
+      line-height: 20px;
+      font-size: 14px;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer { 
+      position: fixed;
+      bottom: 0px;
+      width: 115%;
+      background-color: white;
+      height: fit-content; 
+      display: flex;
+      align-items: center; 
+    }
+  </style>
+</html>
