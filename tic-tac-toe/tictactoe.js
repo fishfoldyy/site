@@ -57,7 +57,7 @@ function endGame(draw) {
   if (draw) {
     winningMessageTextElement.innerText = 'draw.';
   } else {
-    winningMessageTextElement.innerText = `${circleTurn ? "O" : "X"} wins!`;
+    winningMessageTextElement.innerText = `${circleTurn ? "o" : "x"} wins!`;
   }
   winningMessageElement.classList.add('show');
 }
@@ -70,7 +70,7 @@ function isDraw() {
 
 function placeMark(cell, currentClass) {
   cell.classList.add(currentClass);
-  cell.style.backgroundColor = circleTurn ? 'pink' : 'lightblue';
+  cell.style.backgroundColor = circleTurn ? 'pink' : 'skyblue';
   cell.innerText = circleTurn ? 'O' : 'X';
 }
 
