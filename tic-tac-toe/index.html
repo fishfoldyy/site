@@ -14,7 +14,7 @@
 
   <main>
     <!--game here-->
-    <div id="game-board">
+    <div id="game-board" style="display: none;">
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
@@ -25,11 +25,15 @@
       <div class="cell" data-cell></div>
       <div class="cell" data-cell></div>
     </div>
+    <p id="whostarts?" style="font-size: 20px;"></p>
     <h2 id="winning-message" class="winning-message">
       <span id="winning-message-text"></span>
-      <div style="height: 15px;"></div>
-      <button id="restart-button">restart</button>
     </h2>
+    <!--selector here-->
+    <div id="game-menu">
+      <button id="singleplayer">vs AI</button>
+      <button id="multiplayer">vs friend</button>
+    </div>
   </main>
   
   <footer style="margin-top: 100px; padding-bottom: 10px; font-size: 14px;">
@@ -128,6 +132,12 @@
     button:hover {
         background-color: #c8c8c8;
         color: black;
+    }
+
+    button:disabled {
+        background-color: lightgrey;
+        color: grey;
+        cursor: not-allowed;
     }
 
     footer { 
