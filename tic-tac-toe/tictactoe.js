@@ -75,7 +75,8 @@ function startGame() {
       cellElements.forEach(cell => {
         cell.addEventListener('click', handleClick);
       });
-    }, 300);
+    }, 10);
+    setBoardHoverClass();
   }
 }
 
@@ -97,15 +98,17 @@ function handleClick(e) {
   } else {
     swapTurns();
     if (singlePlayer && !circleTurn) {
-      cellElements.forEach(cell => {
-        cell.removeEventListener('click', handleClick);
-      });
-      setTimeout(computerMove, 300);
+    cellElements.forEach(cell => {
+      cell.removeEventListener('click', handleClick);
+    });
+    setTimeout(() => {
+      computerMove();
       cellElements.forEach(cell => {
         cell.addEventListener('click', handleClick);
       });
-    }
+    }, 300);
     setBoardHoverClass();
+    }
   }
 }
 
