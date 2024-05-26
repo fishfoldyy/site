@@ -57,13 +57,11 @@ function startGame() {
   cellElements.forEach(cell => {
     cell.classList.remove(X_CLASS);
     cell.classList.remove(CIRCLE_CLASS);
-    cell.style.backgroundColor = 'white';
     cell.innerText = '';
     cell.removeEventListener('click', handleClick);
     cell.addEventListener('click', handleClick);
   });
   board.style.display = 'grid';
-  setBoardHoverClass();
   winningMessageElement.classList.remove('show');
   
   if (singlePlayer && !circleTurn) {
@@ -76,7 +74,6 @@ function startGame() {
         cell.addEventListener('click', handleClick);
       });
     }, 10);
-    setBoardHoverClass();
   }
 }
 
@@ -107,7 +104,6 @@ function handleClick(e) {
         cell.addEventListener('click', handleClick);
       });
     }, 300);
-    setBoardHoverClass();
     }
   }
 }
@@ -123,6 +119,8 @@ function endGame(draw) {
   }
   winningMessageElement.classList.add('show');
   gameModeMenu.style.display = 'block';
+  html.classList.remove(X_CLASS);
+  html.classList.remove(CIRCLE_CLASS);
   cellElements.forEach(cell => {
     cell.removeEventListener('click', handleClick);
   });
@@ -136,22 +134,11 @@ function isDraw() {
 
 function placeMark(cell, currentClass) {
   cell.classList.add(currentClass);
-  cell.style.backgroundColor = circleTurn ? 'pink' : 'skyblue';
   cell.innerText = circleTurn ? 'O' : 'X';
 }
 
 function swapTurns() {
   circleTurn = !circleTurn;
-}
-
-function setBoardHoverClass() {
-  board.classList.remove(X_CLASS);
-  board.classList.remove(CIRCLE_CLASS);
-  if (circleTurn) {
-    board.classList.add(CIRCLE_CLASS);
-  } else {
-    board.classList.add(X_CLASS);
-  }
 }
 
 function checkWin(currentClass) {
@@ -173,7 +160,6 @@ function computerMove() {
       endGame(true);
     } else {
       swapTurns();
-      setBoardHoverClass();
     }
   } else {
     const emptyCells = [...cellElements].filter(cell => 
@@ -188,7 +174,6 @@ function computerMove() {
       endGame(true);
     } else {
       swapTurns();
-      setBoardHoverClass();
     }
   }
 }
