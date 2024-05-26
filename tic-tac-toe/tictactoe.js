@@ -42,16 +42,16 @@ function startGame() {
   if (Math.random() < 0.5) {
     circleTurn = false; // AI goes first
     if (singlePlayer) {
-      startingPlayerMessageElement.innerText = "AI (X) starts";
+      startingPlayerMessageElement.innerText = "AI (x) starts";
     } else {
-      startingPlayerMessageElement.innerText = "X starts";
+      startingPlayerMessageElement.innerText = "x starts";
     }
   } else {
     circleTurn = true; // player goes first
     if (singlePlayer) {
-      startingPlayerMessageElement.innerText = "player (O) starts";
+      startingPlayerMessageElement.innerText = "player (o) starts";
     } else {
-      startingPlayerMessageElement.innerText = "O starts";
+      startingPlayerMessageElement.innerText = "o starts";
     }
   }
   cellElements.forEach(cell => {
