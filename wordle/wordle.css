@@ -2,7 +2,6 @@ html {
     height: fit-content;
     width: 100%;
     padding-top: 10px;
-    font-family: "Abel", Helvetica, sans-serif;
     overflow: scroll;
 }
 
@@ -21,13 +20,13 @@ header {
     height: 40px;
     background-color: #324ac3;
     color: white;
-    font-family: "Abel", Helvetica, sans-serif;
     text-align: left;
     line-height: 20px;
     font-size: 14px;
     border: 0;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #home:hover {
@@ -59,7 +58,6 @@ header {
     justify-content: center;
     background-color: white;
     color: black;
-    font-family: "Abel", Helvetica, sans-serif;
     font-size: 18px;
     padding: 0;
     margin: 0px 2px;
@@ -88,7 +86,6 @@ header {
 .k {
     background-color: white;
     color: black;
-    font-family: "Abel", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     width: 7vw;
@@ -107,7 +104,6 @@ header {
 .back {
     background-color: white;
     color: black;
-    font-family: "Abel", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     width: 13vw;
@@ -126,7 +122,6 @@ header {
 .enter {
     background-color: white;
     color: black;
-    font-family: "Abel", Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     width: 13vw;
@@ -146,7 +141,6 @@ header {
     display: block;
     background-color: #324ac3;
     color: white;
-    font-family: "Abel", Helvetica, sans-serif;
     padding: 9px 16px;
     margin: 0px 0px 20px 0px;
     width: fit-content;
