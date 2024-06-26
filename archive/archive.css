@@ -2,7 +2,6 @@ html {
     height: fit-content;
     width: 90%;
     padding: 10px;
-    font-family: "Abel", Helvetica, sans-serif;
     overflow: scroll;
     scroll-behavior: smooth;
 }
@@ -22,10 +21,10 @@ header {
     height: 40px;
     background-color: #324ac3;
     color: white;
-    font-family: "Abel", Helvetica, sans-serif;
     text-align: left;
     line-height: 20px;
     font-size: 14px;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #home:hover {
@@ -46,7 +45,6 @@ button:hover {
 button {
     background-color: #324ac3;
     color: white;
-    font-family: "Abel", Helvetica, sans-serif;
     font-size: 16px;
     width: 140px;
     padding-top: 10px;
