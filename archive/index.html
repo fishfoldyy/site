@@ -3,15 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>site archive</title>
+    <title>archive</title>
     <link rel="stylesheet" href="archive.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="../global/global.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
   </head>
   <main>
     <h1 style="display: flex;">
       <b>site archive</b>
       <div style="width: 40%;"></div>
-      <button id="home" onclick="window.location.href='/site'">home</button>
+      <button id="home">home</button>
+      <script>
+        const root = '/' + window.location.pathname.split('/')[1];
+        document.getElementById("home").addEventListener("click", () => {
+          window.location.href = root;
+        })
+      </script>
       <div style="height: 30px;"></div>
     </h1>
   
