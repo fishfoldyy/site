@@ -1,52 +1,53 @@
 html {
     height: fit-content;
-    width: 100%;
+    width: 100vw;
     padding: 0;
-    font-family: "Abel", Helvetica, sans-serif;
+    display: flex;
+    font-family: "Inter", sans-serif;
     overflow: scroll;
     scroll-behavior: smooth;
 }
 
 body {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .menu {
-    top: 0;
-    bottom: 0;
-    margin: 0;
+    margin: 0 0;
     padding: 0;
     background-color: #324ac3;
     height: fit-content;
+    width: 100%;
 }
 
 .menu button {
     background-color: #324ac3;
     color: white;
-    font-family: "Abel", Helvetica, sans-serif;
     width: 70px;
     padding-top: 15px;
     padding-bottom: 15px;
     border: 0;
     border-radius: 0px;
     cursor: pointer;
+    margin: 0;
 }
 
 button:hover {
-    background-color: #c8c8c8;
+    background-color: #ccc;
     color: black;
 }
 
 button {
     background-color: #324ac3;
     color: white;
-    font-family: "Abel", Helvetica, sans-serif;
     width: 100px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: 50px;
+    padding: 0;
+    margin: 0 0 4px 0;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 #return-to-top {
@@ -58,7 +59,7 @@ button {
     height: 40px;
     background-color: #324ac3;
     color: white;
-    font-family: "Abel", Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     border-radius: 50%;
     text-align: center;
     line-height: 20px;
