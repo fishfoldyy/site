@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>
+          Katamino Solver
+      </title>
+      <link rel="stylesheet" href="../global/global.css">
+      <link rel="stylesheet" href="katamino.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+  </head>
+
+  <body>
+    <h1 style="display: flex;">
+      <b>katamino solver</b>
+      <button id="home">home</button>
+    </h1>
+
+    <div id="control">
+      <p><i>
+        This is a copy of <a href="https://github.com/MichaelKat/KataminoSolver/">MichaelKat's solver</a>.
+      </i></p>
+        
+      <p>
+        Katamino is a puzzle game in which the player is given a board of a certain
+        size and a set of pieces to fill that board. Each piece is unique in shape
+        but consists of 5 square "blocks", meaning all pieces have the same area.
+        When it comes to the board, even though the height of the board is a
+        constant 5 blocks, its width depends on the number of pieces selected;
+        for each piece selected, the board gets one block added to its width. Thus,
+        the board always has just enough space to accomodate all the pieces selected
+        - the challenge is to make them all fit!
+        <br><br>
+        <note style="color: red; font-size: 15pt;"">Note: Do expect <i>very</i> long execution times when selecting 9 shapes or more (javascript is a bit slow).</note>
+        <br><br>
+        Select 'Find only one solution' to reduce calculating time.
+      </p>
+
+      <h3>Select Shapes:</h3>
+
+      <div id="shapes">
+
+      </div>
+
+      <button type="button" id="run_button"></button>
+      <div style="height: 5px;"></div>
+      <input id="one_sol_box" type="checkbox"><span>Find only one solution (highly recommended when choosing 7 shapes or more)</span>
+    </div>
+
+    <div>
+      <div id="solutions_info">
+
+      </div>
+      <div id="solutions">
+
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="katamino.js"></script>
+  </body>
+</html>
